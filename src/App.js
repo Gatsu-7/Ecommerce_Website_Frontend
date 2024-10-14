@@ -8,6 +8,8 @@ import HeroSection from "./pages/hero";
 import Features from "./pages/features";
 import Promotions from "./pages/Promotions";
 import FeaturedProducts from "./pages/Products";
+import Testimonials from "./pages/Testimonials";
+import NewsletterSignup from "./pages/Newsletter";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Promotions />
         <Features />
         <FeaturedProducts />
+        <Testimonials />
+        <NewsletterSignup />
 
         <main>
           <Routes>
