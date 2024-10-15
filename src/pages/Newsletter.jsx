@@ -17,7 +17,7 @@ const NewsletterSignup = () => {
 
   return (
     <section className="bg-gray-900 py-12 ">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-[35rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-6xl font-extrabold text-gray-100 mb-4">
             Sign Up for Our Newsletter
@@ -50,7 +50,7 @@ const NewsletterSignup = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="abc@gmail.com"
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
           </div>
 

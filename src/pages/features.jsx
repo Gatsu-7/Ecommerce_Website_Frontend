@@ -37,7 +37,7 @@ const Features = () => {
             style={{
               backgroundColor: "#2234ae",
               backgroundImage:
-                "linear-gradient(210deg, #041e7a 0%, #211f1c 74%)",
+                "linear-gradient(210deg, #430818 0%, #211f1c 74%)",
             }}
           >
             <div className="flex justify-center  mb-4">
