@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 
 import AboutUs from "./pages/Aboutus";
 import HeroSection from "./pages/hero";
+import ContactPage from "./pages/ContactPage";
+import AuthPage from "./pages/Login/Register";
 
 function App() {
   return (
@@ -19,10 +21,10 @@ function App() {
             <Route path="/" element={<HeroSection />}></Route>
             <Route path="/shop"></Route>
             <Route path="/about" element={<AboutUs />} />
-            <Route path="/contact"></Route>
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/cart"></Route>
             <Route path="/product/:id" />
-            <Route path="/user" />
+            <Route path="/register" element={<AuthPage />} />
           </Routes>
         </main>
 

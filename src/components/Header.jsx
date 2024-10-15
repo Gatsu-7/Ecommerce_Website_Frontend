@@ -60,7 +60,7 @@ const Header = () => {
             <BsCart4 />
           </Link>
           <Link
-            to="/user"
+            to="/register"
             className="relative p-2 text-white text-xl transition duration-150 ease-in-out before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:w-0 before:h-[2px] before:bg-white before:transition-all before:duration-300 before:ease-in-out hover:before:left-0 hover:before:w-full"
           >
             <FaUser />
