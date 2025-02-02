@@ -9,17 +9,17 @@ import AboutUs from "./pages/Aboutus";
 import HeroSection from "./pages/hero";
 import ContactPage from "./pages/ContactPage";
 import AuthPage from "./pages/Login/Register";
+import ProductListingPage from "./pages/ProductList";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
-
         <main>
           <Routes>
             <Route path="/" element={<HeroSection />}></Route>
-            <Route path="/shop"></Route>
+            <Route path="/shop" element={<ProductListingPage />}></Route>
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/cart"></Route>

@@ -13,11 +13,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-2xl font-semibold text-blue-500 mb-4">
-              About Us
+              Trust Matters
             </h3>
             <p className="text-base text-gray-400">
-              We provide the best massagers and wellness products to help you
-              feel relaxed and rejuvenated every day.
+              deZon – A name of trust built up with years of experience. You
+              will find here 100% Genuine and Brand New products.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/products"
+                  href="/shop"
                   className="text-base text-gray-400 hover:text-white transition"
                 >
                   Products
@@ -78,7 +78,7 @@ const Footer = () => {
                   href="/returns"
                   className="text-base text-gray-400 hover:text-white transition"
                 >
-                  Returns & Exchanges
+                  Returns & Exchanges Policy
                 </a>
               </li>
               <li>
@@ -86,7 +86,7 @@ const Footer = () => {
                   href="/shipping"
                   className="text-base text-gray-400 hover:text-white transition"
                 >
-                  Shipping Information
+                  Shipping & Delivery
                 </a>
               </li>
               <li>
@@ -95,6 +95,22 @@ const Footer = () => {
                   className="text-base text-gray-400 hover:text-white transition"
                 >
                   Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/termsofservice"
+                  className="text-base text-gray-400 hover:text-white transition"
+                >
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/cancellation"
+                  className="text-base text-gray-400 hover:text-white transition"
+                >
+                  Cancellation Policy
                 </a>
               </li>
             </ul>
