@@ -75,7 +75,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/returns"
+                  href="/returns_and_exchanges"
                   className="text-base text-gray-400 hover:text-white transition"
                 >
                   Returns & Exchanges Policy
@@ -83,7 +83,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/shipping"
+                  href="/shipping_and_delivery"
                   className="text-base text-gray-400 hover:text-white transition"
                 >
                   Shipping & Delivery

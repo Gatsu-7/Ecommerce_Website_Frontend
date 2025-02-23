@@ -10,6 +10,12 @@ import HeroSection from "./pages/hero";
 import ContactPage from "./pages/ContactPage";
 import AuthPage from "./pages/Login/Register";
 import ProductListingPage from "./pages/ProductList";
+import FAQPage from "./pages/faq";
+import ReturnsAndExchanges from "./pages/returnsndexchanges";
+import ShippingAndDelivery from "./pages/shippingnddelivery";
+import PrivacyPolicy from "./pages/privacy";
+import TermsOfService from "./pages/terms";
+import CancellationPolicy from "./pages/cancellation";
 
 function App() {
   return (
@@ -25,6 +31,18 @@ function App() {
             <Route path="/cart"></Route>
             <Route path="/product/:id" />
             <Route path="/register" element={<AuthPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route
+              path="/returns_and_exchanges"
+              element={<ReturnsAndExchanges />}
+            />
+            <Route
+              path="/shipping_and_delivery"
+              element={<ShippingAndDelivery />}
+            />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/termsofservice" element={<TermsOfService />} />
+            <Route path="/cancellation" element={<CancellationPolicy />} />
           </Routes>
         </main>
 
