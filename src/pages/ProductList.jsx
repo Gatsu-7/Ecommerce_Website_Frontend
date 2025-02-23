@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const ProductListingPage = () => {
   const [products, setProducts] = useState([]);
@@ -109,12 +109,17 @@ const ProductListingPage = () => {
                 key={product.id}
                 className="bg-white p-4 rounded-lg shadow-lg flex flex-col justify-center"
               >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-40 object-cover mb-4 rounded"
-                />
-                <h3 className="text-lg font-semibold">{product.name}</h3>
+                <Link to={`/product/${product.id}`}>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-40 object-cover mb-4 rounded"
+                  />
+                </Link>
+                <Link to={`/product/${product.id}`}>
+                  <h3 className="text-lg font-semibold">{product.name}</h3>
+                </Link>
+
                 <p className="text-gray-600">₹{product.price.toFixed(2)}</p>
                 <button className="mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 transition-colors">
                   Add to Cart

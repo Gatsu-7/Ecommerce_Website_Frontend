@@ -16,6 +16,7 @@ import ShippingAndDelivery from "./pages/shippingnddelivery";
 import PrivacyPolicy from "./pages/privacy";
 import TermsOfService from "./pages/terms";
 import CancellationPolicy from "./pages/cancellation";
+import ProductDetail from "./pages/Products/ProductDetail";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/cart"></Route>
-            <Route path="/product/:id" />
+            <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/register" element={<AuthPage />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route

@@ -38,7 +38,6 @@ const Header = () => {
              hover:before:left-0 hover:before:w-full"
           >
             Shop <MdArrowDropDown className="inline" />
-            {/* Dropdown Menu */}
             <div
               className="hidden absolute left-1/2 transform -translate-x-1/2 mt-2 px-4 py-4 
                   transition duration-100 ease-in-out rounded-lg group-hover:block 
