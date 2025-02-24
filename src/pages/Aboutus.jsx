@@ -5,7 +5,7 @@ const AboutUs = () => {
     <div className=" mx-auto px-10 py-10 bg-gradient-to-tl from-[#13547a] via-[#0c3c58] to-[#020111] flex justify-center items-center">
       <div className="max-w-[1200px]">
         <section className="text-center mb-12 ">
-          <h1 className="text-7xl font-bold text-gray-100 mb-4">
+          <h1 className="text-6xl font-bold text-gray-100 mb-4">
             Welcome to <span className="text-blue-500 text-8xl"> deZon </span>
           </h1>
           <p className="text-lg text-gray-100 leading-relaxed">
