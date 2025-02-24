@@ -39,7 +39,7 @@ const ProductDetails = () => {
       <img
         src={product.image}
         alt={product.name}
-        className="w-full max-w-md hover:scale-110 transition-all ease-in-out rounded-md"
+        className="w-full max-w-md hover:scale-105 transition-all ease-in-out rounded-md"
       />
     </div>
   );
