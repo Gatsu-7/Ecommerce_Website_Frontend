@@ -64,7 +64,7 @@ const PrivacyPolicy = () => {
           <li>Legal authorities if required by law.</li>
         </ul>
 
-        <h2 className="text-xl font-semibold text-white mt-6">
+        <h2 className="text-xl font-bold text-white mt-6">
           4. Cookies & Tracking Technologies
         </h2>
         <p className="text-white mt-2">
