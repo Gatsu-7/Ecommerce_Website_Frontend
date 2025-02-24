@@ -36,7 +36,11 @@ const ProductDetails = () => {
       <h1 className="text-3xl font-bold">{product.name}</h1>
       <p className="text-gray-700">{product.description}</p>
       <p className="text-xl font-semibold text-red-500">₹{product.price}</p>
-      <img src={product.image} alt={product.name} className="w-full max-w-md" />
+      <img
+        src={product.image}
+        alt={product.name}
+        className="w-full max-w-md hover:scale-105 transition-all ease-in-out rounded-md"
+      />
     </div>
   );
 };

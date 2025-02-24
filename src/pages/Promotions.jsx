@@ -11,7 +11,7 @@ import buy from "../assets/b1g1f.jpg";
 const Promotions = () => {
   return (
     <section className="bg-gray-900 py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-7xl font-extrabold text-gray-300">
             Current{" "}
@@ -50,7 +50,7 @@ const Promotions = () => {
                 className="w-full h-60 object-center"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white p-6">
-                <h3 className="text-3xl font-bold">20% Off Massagers</h3>
+                <h3 className="text-4xl font-bold">20% Off Massagers</h3>
                 <p className="mt-2">
                   Get a 20% discount on all massagers this month. Limited stock
                   available!
@@ -70,7 +70,7 @@ const Promotions = () => {
                 className="w-full h-60 object-center"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white p-6">
-                <h3 className="text-3xl font-bold">Buy One Get One Free</h3>
+                <h3 className="text-4xl font-bold">Buy One Get One Free</h3>
                 <p className="mt-2">
                   For a limited time, buy one massager and get a second one
                   absolutely free!
@@ -90,7 +90,7 @@ const Promotions = () => {
                 className="w-full h-60 object-center"
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white p-6">
-                <h3 className="text-3xl font-bold">Free Shipping</h3>
+                <h3 className="text-4xl font-bold">Free Shipping</h3>
                 <p className="mt-2">
                   Enjoy free shipping on all orders over ₹500. Don’t miss out!
                 </p>
