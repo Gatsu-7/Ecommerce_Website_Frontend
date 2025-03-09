@@ -70,7 +70,7 @@ const Footer = () => {
                   href="/faq"
                   className="text-base text-gray-400 hover:text-white transition"
                 >
-                  FAQs
+                  FAQ
                 </a>
               </li>
               <li>
