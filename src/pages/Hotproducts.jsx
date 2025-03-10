@@ -1,33 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import video from "../assets/1101187_Burning_Fire_1280x720.mp4";
-const HotProducts = () => {
-  const products = [
-    {
-      id: 1,
-      name: "Portable Neck Massager",
-      price: "₹249.99",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      id: 2,
-      name: "Foot Reflexology Machine",
-      price: "₹279.99",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      id: 3,
-      name: "Deep Tissue Massager",
-      price: "₹239.99",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      id: 4,
-      name: "Eye Massager with Heat",
-      price: "₹259.99",
-      image: "https://via.placeholder.com/150",
-    },
-  ];
+import axios from "axios";
 
+const HotProducts = () => {
+  // const products = [
+  //   {
+  //     id: 1,
+  //     name: "Portable Neck Massager",
+  //     price: "₹249.99",
+  //     image: "https://via.placeholder.com/150",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Foot Reflexology Machine",
+  //     price: "₹279.99",
+  //     image: "https://via.placeholder.com/150",
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Deep Tissue Massager",
+  //     price: "₹239.99",
+  //     image: "https://via.placeholder.com/150",
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Eye Massager with Heat",
+  //     price: "₹259.99",
+  //     image: "https://via.placeholder.com/150",
+  //   },
+  // ];
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/api/products")
+      .then((response) => setProducts(response.data))
+      .catch((error) =>
+        console.error("Error while fetching the products:", error)
+      );
+  }, []);
   return (
     <div className="bg-gray-900 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,15 +67,15 @@ const HotProducts = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {products.map((product) => (
+          {products.slice(9, 17).map((product) => (
             <div
               key={product.id}
-              className="bg-white shadow-md rounded-lg overflow-hidden hover:scale-105 transform transition-transform duration-300"
+              className="bg-white shadow-md rounded-lg overflow-hidden hover:scale-105 transform transition-transform duration-300 flex items-center flex-col "
             >
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-48 object-cover"
+                className=" h-64 object-cover rounded-lg m-2"
               />
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800">

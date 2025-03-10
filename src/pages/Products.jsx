@@ -1,56 +1,67 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const FeaturedProducts = () => {
-  const products = [
-    {
-      id: 1,
-      name: "Handheld Massager",
-      price: "₹249.99",
-      image: "",
-    },
-    {
-      id: 2,
-      name: "Neck & Shoulder Massager",
-      price: "₹279.99",
-      image: "",
-    },
-    {
-      id: 3,
-      name: "Foot Massager",
-      price: "₹299.99",
-      image: "",
-    },
-    {
-      id: 4,
-      name: "Full Body Massage Chair",
-      price: "₹2299.99",
-      image: "",
-    },
-    {
-      id: 5,
-      name: "Full Body Massage Chair",
-      price: "₹2299.99",
-      image: "",
-    },
-    {
-      id: 6,
-      name: "Full Body Massage Chair",
-      price: "₹2299.99",
-      image: "",
-    },
-    {
-      id: 7,
-      name: "Full Body Massage Chair",
-      price: "₹2299.99",
-      image: "",
-    },
-    {
-      id: 8,
-      name: "Full Body Massage Chair",
-      price: "₹2299.99",
-      image: "",
-    },
-  ];
+  // const products = [
+  //   {
+  //     id: 1,
+  //     name: "Handheld Massager",
+  //     price: "₹249.99",
+  //     image: "",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Neck & Shoulder Massager",
+  //     price: "₹279.99",
+  //     image: "",
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Foot Massager",
+  //     price: "₹299.99",
+  //     image: "",
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Full Body Massage Chair",
+  //     price: "₹2299.99",
+  //     image: "",
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "Full Body Massage Chair",
+  //     price: "₹2299.99",
+  //     image: "",
+  //   },
+  //   {
+  //     id: 6,
+  //     name: "Full Body Massage Chair",
+  //     price: "₹2299.99",
+  //     image: "",
+  //   },
+  //   {
+  //     id: 7,
+  //     name: "Full Body Massage Chair",
+  //     price: "₹2299.99",
+  //     image: "",
+  //   },
+  //   {
+  //     id: 8,
+  //     name: "Full Body Massage Chair",
+  //     price: "₹2299.99",
+  //     image: "",
+  //   },
+  // ];
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/api/products")
+      .then((response) => setProducts(response.data))
+      .catch((error) =>
+        console.error("Error while fetching the products:", error)
+      );
+  }, []);
 
   return (
     <section className="bg-gray-900 py-12">
@@ -65,23 +76,23 @@ const FeaturedProducts = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {products.map((product) => (
+          {products.slice(0, 8).map((product) => (
             <div
               key={product.id}
-              className="bg-white shadow-lg rounded-lg overflow-hidden"
+              className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition-transform duration-300 flex items-center flex-col "
             >
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-64 object-cover"
+                className=" h-64 object-cover rounded-lg m-2"
               />
 
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-gray-900">
                   {product.name}
                 </h3>
-                <p className="mt-2 text-xl font-bold text-gray-800">
-                  {product.price}
+                <p className="mt-2 text-xl font-bold text-gray-800 text-center">
+                  ₹{product.price}
                 </p>
 
                 <div className="flex justify-center items-center">
