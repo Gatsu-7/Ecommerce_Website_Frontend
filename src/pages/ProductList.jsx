@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useLocation } from "react-router-dom";
-
+import { useCart } from "./CartContext";
 const ProductListingPage = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -10,6 +10,7 @@ const ProductListingPage = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const searchQuery = queryParams.get("query");
+  const { dispatch } = useCart();
 
   useEffect(() => {
     axios
@@ -121,7 +122,12 @@ const ProductListingPage = () => {
                 </Link>
 
                 <p className="text-gray-600">₹{product.price.toFixed(2)}</p>
-                <button className="mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 transition-colors">
+                <button
+                  className="mt-4 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 transition-colors"
+                  onClick={() =>
+                    dispatch({ type: "ADD_TO_CART", payload: product })
+                  }
+                >
                   Add to Cart
                 </button>
               </div>

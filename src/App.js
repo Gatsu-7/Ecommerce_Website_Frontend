@@ -17,6 +17,7 @@ import PrivacyPolicy from "./pages/privacy";
 import TermsOfService from "./pages/terms";
 import CancellationPolicy from "./pages/cancellation";
 import ProductDetail from "./pages/Products/ProductDetail";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
             <Route path="/shop" element={<ProductListingPage />}></Route>
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/cart"></Route>
+            <Route path="/cart" element={<Cart />}></Route>
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/register" element={<AuthPage />} />
             <Route path="/faq" element={<FAQPage />} />
